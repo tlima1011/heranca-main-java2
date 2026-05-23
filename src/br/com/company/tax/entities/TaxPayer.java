@@ -15,7 +15,7 @@ public abstract class TaxPayer {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(); 
-		sb.append(Name + ": $ "); 
+		sb.append(Name + ": $ " + String.format("%.2f", tax())); 
 		
 		return sb.toString();
 	}

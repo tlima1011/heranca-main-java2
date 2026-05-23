@@ -13,13 +13,4 @@ public class Company extends TaxPayer{
 	public double tax() {
 		return (NumberOfEmployees < 10) ? (AnualIncome * 0.16) : (AnualIncome * 0.14);
 	} 
-	
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder(); 
-		sb.append(super.toString());
-		sb.append(tax());
-		
-		return sb.toString();
-	} 
 }
