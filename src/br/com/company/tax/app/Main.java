@@ -16,6 +16,7 @@ public class Main {
 		ArrayList<TaxPayer> list = new ArrayList<>(); 
 		
 		Scanner ler = new Scanner(System.in); 
+		double sum = 0.0; 
 		
 		System.out.print("Enter the number of tax payers: ");
 		int n = ler.nextInt(); 
@@ -47,6 +48,11 @@ public class Main {
 		for (TaxPayer t : list) {
 			System.out.println(t);
 		}
+		
+		for (TaxPayer t : list) {
+			sum += t.tax(); 
+		}
+		System.out.println("\nTOTAL TAXES: $ " + String.format("%.2f", sum));
 		ler.close();
 	}
 }
